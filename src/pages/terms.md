@@ -1,9 +1,9 @@
 ---
-title: 'Terms and Conditions'
+title: 'Términos y condiciones'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: January 06, 2023
+_Last updated_: 8 de abril de 2025
 
 Please read these terms and conditions carefully before using Our Service.
 
