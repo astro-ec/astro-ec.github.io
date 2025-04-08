@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: OEAA - Astronomía EC
+  site: 'https://astro-ec.github.io/'
   base: '/'
   trailingSlash: false
 
