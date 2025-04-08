@@ -1,5 +1,5 @@
 site:
-  name: OEAA - Astronomía EC
+  name: OEAA
   site: 'https://astro-ec.github.io/'
   base: '/'
   trailingSlash: false
