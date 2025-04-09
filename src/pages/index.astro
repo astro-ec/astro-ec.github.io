@@ -20,7 +20,6 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
-
   <Hero
   actions={[
     {
@@ -31,44 +30,19 @@ const metadata = {
     },
     { text: 'Conoce más', href: '#features' },
   ]}
->
-  <!-- Title Slot -->
+  image={{ src: '~/assets/images/galaxy1.png', alt: 'Galaxy' }}
+  >
   <Fragment slot="title">
     <div class="flex flex-col space-y-1">
-      <span class="block sm:inline">Olimpiadas Ecuatorianas</span>
-      <span class="text-accent dark:text-white highlight">
-        de Astronomía y Astrofísica
-      </span>
+      <span class="block sm:inline"> Olimpiadas Ecuatorianas</span>
+      <span class="text-accent dark:text-white highlight"> de Astronomía y Astrofísica</span>
     </div>
   </Fragment>
 
-  <!-- Subtitle Slot -->
   <Fragment slot="subtitle">
     <span class="hidden sm:inline">
-      Aprende sobre el Universo y participa en competencias internacionales
-    </span>
-  </Fragment>
-
-  <!-- Light Image -->
-  <Fragment slot="image-light">
-    <Image
-      src="/assets/images/back_light.svg"
-      alt="stars"
-      width={1024}
-      height={576}
-      class="mx-auto w-full rounded-md object-cover"
-    />
-  </Fragment>
-
-  <!-- Dark Image (optional fallback to same image) -->
-  <Fragment slot="image-dark">
-    <Image
-      src="/assets/images/back_dark.svg"
-      alt="stars"
-      width={1024}
-      height={576}
-      class="mx-auto w-full rounded-md object-cover"
-    />
+      Aprende sobre el Universo y participa en competencias internacionales</span
+    >
   </Fragment>
   </Hero>
 
