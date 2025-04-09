@@ -4,13 +4,13 @@
 
 @layer utilities {
   .bg-page {
-    background-color: var(--aw-color-bg-page);
-  }
-  .bg-dark {
     background-color: var(--aw-color-bg-page-dark);
   }
-  .bg-light {
+  .bg-dark {
     background-color: var(--aw-color-bg-page);
+  }
+  .bg-light {
+    background-color: var(--aw-color-bg-page-dark);
   }
   .text-page {
     color: var(--aw-color-text-page);
