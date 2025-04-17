@@ -7,8 +7,15 @@ import logoWhite from '../assets/images/nwlg_white.png';
 <span
   class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
 >
-  <picture>
-    <source srcset={logoWhite} media="(prefers-color-scheme: dark)" />
-    <img src={logo} alt="Site Logo" width="200" height="50" />
-  </picture>
+  <picture
+    <source
+    srcset={logoWhite}
+    media="(prefers-color-scheme: dark)"
+    />
+    <Image
+      src={logo}
+      alt="Logo"
+      width="50"
+    />
+  />
 </span>
