@@ -3,7 +3,7 @@ title: 'Términos y Condiciones de la Olimpiada Nacional y participación en Oli
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Última actualización_: 2024
+_Última actualización:_ 2024
 
 _Con base en el Estatuto de las Olimpiadas Ecuatorianas de Astronomía y Astrofísica_
 
@@ -54,7 +54,7 @@ Los Estudiantes Participantes que obtengan los cinco mejores puntajes serán los
 Los Estudiantes Participantes que obtengan los mejores diez puntajes podrán participar en el Examen Nacional de Selección del año siguiente para obtener un cupo para la Delegación Ecuatoriana que participe en la International Olympiad on Astronomy and Astrophysics.
 
 ---
-Un estudiante puede inscribirse en la 9$^{\rm na}$ Olimpiada Ecuatoriana de Astronomía y Astrofísica 2026 entre julio a septiembre de 2025. Participará en la primera fase entre octubre y noviembre de 2025. Participará en la segunda fase entre diciembre de 2025 y febrero de 2026. Participará en la tercera fase entre marzo y mayo de 2026. Si queda entre los mejores cinco en el Examen Final de Selección, el estudiante podrá participar en la XVIII Olimpiada Latinoamericana de Astronomía y Astronáutica Guatemala 2026. Si ha quedado entre los primeros diez, el estudiante también podrá participar en el Examen Nacional de Selección 2027 para elegir a los miembros de la Delegación Ecuatoriana que participen en la 20th International Olympiad on Astronomy and Astrophysics 2027.
+> **Ejemplo:** Un estudiante puede inscribirse en la 9na Olimpiada Ecuatoriana de Astronomía y Astrofísica 2026 entre julio a septiembre de 2025. Participará en la primera fase entre octubre y noviembre de 2025. Participará en la segunda fase entre diciembre de 2025 y febrero de 2026. Participará en la tercera fase entre marzo y mayo de 2026. Si queda entre los mejores cinco en el Examen Final de Selección, el estudiante podrá participar en la XVIII Olimpiada Latinoamericana de Astronomía y Astronáutica Guatemala 2026. Si ha quedado entre los primeros diez, el estudiante también podrá participar en el Examen Nacional de Selección 2027 para elegir a los miembros de la Delegación Ecuatoriana que participen en la 20th International Olympiad on Astronomy and Astrophysics 2027.
 ---
 
 ### Requisitos de participación
