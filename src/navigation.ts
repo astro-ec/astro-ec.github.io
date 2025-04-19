@@ -42,7 +42,7 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terminos') },
+    { text: 'Términos de la Olimpiada', href: getPermalink('/terminos') },
   ],
   socialLinks: [
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/oeaa_ec' },
