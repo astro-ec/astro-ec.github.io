@@ -4,7 +4,7 @@ export const headerData = {
   links: [
     {
       text: 'Olimpiada Nacional',
-      href: '#',
+      href: 'olimpiada-nacional',
     },
     {
       text: 'Internacional',
