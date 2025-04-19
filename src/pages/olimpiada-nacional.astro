@@ -1,0 +1,28 @@
+---
+import Layout from '~/layouts/LandingLayout.astro';
+
+import Hero2 from '~/components/widgets/Hero2.astro';
+import CallToAction from '~/components/widgets/CallToAction';
+
+const metadata = {
+    title: "Olimpiada Nacional"
+};
+---
+
+<Layout metadata={metadata}>
+
+    <Hero2
+        tagline="Empieza tu viaje"
+        title="¡Participa en la Olimpiada Nacional de Astronomía!"
+        subtitle="Aprende sobre los fundamentos de física y astrofísica"
+        actions={[
+            {variant: 'primary', text: 'Inscríbete', href='#', icon: 'tabler:square-rounded-arrow-right'},
+            {text: 'Conoce sobre la competencia', href: '#'},
+        ]}
+        image={{
+            src: '../assets/images/agn.jpg',
+            alt: 'AGN',
+        }}
+    />
+
+    
