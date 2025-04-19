@@ -42,8 +42,7 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'Terms', href: getPermalink('/terminos') },ss
   ],
   socialLinks: [
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/oeaa_ec' },
@@ -51,6 +50,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/astro-ec' },
   ],
   footNote: `
-    The Ecuadorian Olympiadas on Astronomy and Astrophysics 2025 · All rights reserved.
+    The Ecuadorian Olympiads on Astronomy and Astrophysics 2025 · All rights reserved.
   `,
 };
