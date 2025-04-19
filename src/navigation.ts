@@ -37,7 +37,6 @@ export const footerData = {
       links: [
         { text: 'Exámenes Nacionales', href: '#' },
         { text: 'Exámenes Internacionales', href: '#' },
-        { text: 'Material de estudiox', href: '#' },
       ],
     },
   ],
