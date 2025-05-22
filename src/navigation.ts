@@ -15,8 +15,8 @@ export const headerData = {
       href: '#',
     },
     {
-      text: 'Blog',
-      href: '#',
+      text: 'Ganadores',
+      href: getPermalink('/campeones-nacionales'),
     },
   ],
   actions: [{ text: 'Contáctanos', href: 'mailto:info@oeaa-astro.org', target: '_blank' }],
