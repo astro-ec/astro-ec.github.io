@@ -3,13 +3,13 @@ title: 'Ganadores de la Olimpiada Nacional de Astronomía'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-## Ganadores de la Olimpiada Nacional de Astronomía
-
 ### 8va Olimpiada Ecuatoriana de Astronomía y Astrofísica 2025
+_Sede de la Prueba Final de Selección: TBD_
 
 _Serán determinados después de la Prueba Final de Selección 2025 (31 de mayo 2025)_
 
 ### 7ma Olimpiada Ecuatoriana de Astronomía y Astronáutica 2024
+_Sede de la Prueba Final de Selección: Universidad Politécnica Salesiana Sede Quito_
 
 1. Karla Doménica Guevara Castro (Quito)
 
@@ -20,6 +20,7 @@ _Serán determinados después de la Prueba Final de Selección 2025 (31 de mayo 
 4. Cielo Valentyne Calderón Moya (Quito)
 
 ### 6ta Olimpiada Ecuatoriana de Astronomía y Astronáutica 2023
+_Sede de la Prueba Final de Selección: Universidad Yachay Tech_
 
 1. Josúe Eduardo Morejón Intriago (Quito)
 
@@ -32,6 +33,7 @@ _Serán determinados después de la Prueba Final de Selección 2025 (31 de mayo 
 5. Emily Johanna Chumania Chumaña (Quito)
 
 ### 5ta Olimpiada Ecuatoriana de Astronomía y Astronáutica 2023
+_Sede de la Prueba Final de Selección: Universidad Yachay Tech_
 
 1. Aaron David Andrango Díaz (Quito)
 
@@ -44,6 +46,7 @@ _Serán determinados después de la Prueba Final de Selección 2025 (31 de mayo 
 5. Paolo Salvatore Suasti Gudiño (Ibarra)
 
 ### 4ta Olimpiada Ecuatoriana de Astronomía y Astronáutica 2023
+_Sede de la Prueba Final de Selección: Online_
 
 1. Iván Andrés Fierro Sánchez (Quito)
 
@@ -56,6 +59,7 @@ _Serán determinados después de la Prueba Final de Selección 2025 (31 de mayo 
 5. Jaziel Saraí Gómez Barrera (Atuntaqui)
 
 ### 3ra Olimpiada Ecuatoriana de Astronomía y Astronáutica 2019
+_Sede de la Prueba Final de Selección: Universidad Técnica de Cotopaxi_
 
 1. Daniel Alexander Villarruel Yánez (Quito)
 
@@ -68,6 +72,7 @@ _Serán determinados después de la Prueba Final de Selección 2025 (31 de mayo 
 5. Britney Carolina Robalino Ramirez (Quito)
 
 ### 2da Olimpiada Ecuatoriana de Astronomía y Astronáutica 2019
+_Sede de la Prueba Final de Selección: Universidad Técnica de Cotopaxi_
 
 1. Bryan Garay (Guayaquil)
 
@@ -78,6 +83,7 @@ _Serán determinados después de la Prueba Final de Selección 2025 (31 de mayo 
 4. Daniela Santamaría (Guayaquil)
 
 ### 1ra Olimpiada Ecuatoriana de Astronomía y Astronáutica 2019
+_Sede de la Prueba Final de Selección: Universidad Técnica de Cotopaxi_
 
 1. Emily Andrea Ayo Iza
 
