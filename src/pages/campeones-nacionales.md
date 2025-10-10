@@ -3,12 +3,23 @@ title: 'Ganadores de la Olimpiada Nacional de Astronomía'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-### 8va Olimpiada Ecuatoriana de Astronomía y Astrofísica 2025
-_Sede de la Prueba Final de Selección: TBD_
+### IX Olimpiada Ecuatoriana de Astronomía y Astrofísica 2026
+_Serán determinados después de la Prueba Final de Selección 2026 (25 de abril de 2026)_
 
-_Serán determinados después de la Prueba Final de Selección 2025 (31 de mayo 2025)_
+### VIII Olimpiada Ecuatoriana de Astronomía y Astrofísica 2025
+_Sede de la Prueba Final de Selección: Museo Interactivo de Ciencia, Quito_
 
-### 7ma Olimpiada Ecuatoriana de Astronomía y Astronáutica 2024
+1. José David Chiluisa Zambrano (Guayaquil)
+
+2. Luis Mario Tigselema Vaca (Latacunga)
+
+3. María Gabriela Tandazo Baquero (Riobamba)
+
+4. Alexa Isabel Montenegro Viteri (Quito)
+
+5. Karú Salomé Uzcategui Briceño (Cuenca)
+
+### VII Olimpiada Ecuatoriana de Astronomía y Astronáutica 2024
 _Sede de la Prueba Final de Selección: Universidad Politécnica Salesiana Sede Quito_
 
 1. Karla Doménica Guevara Castro (Quito)
@@ -19,7 +30,7 @@ _Sede de la Prueba Final de Selección: Universidad Politécnica Salesiana Sede 
 
 4. Cielo Valentyne Calderón Moya (Quito)
 
-### 6ta Olimpiada Ecuatoriana de Astronomía y Astronáutica 2023
+### VI Olimpiada Ecuatoriana de Astronomía y Astronáutica 2023
 _Sede de la Prueba Final de Selección: Universidad Yachay Tech_
 
 1. Josúe Eduardo Morejón Intriago (Quito)
@@ -32,7 +43,7 @@ _Sede de la Prueba Final de Selección: Universidad Yachay Tech_
 
 5. Emily Johanna Chumania Chumaña (Quito)
 
-### 5ta Olimpiada Ecuatoriana de Astronomía y Astronáutica 2023
+### V Olimpiada Ecuatoriana de Astronomía y Astronáutica 2023
 _Sede de la Prueba Final de Selección: Universidad Yachay Tech_
 
 1. Aaron David Andrango Díaz (Quito)
@@ -45,7 +56,7 @@ _Sede de la Prueba Final de Selección: Universidad Yachay Tech_
 
 5. Paolo Salvatore Suasti Gudiño (Ibarra)
 
-### 4ta Olimpiada Ecuatoriana de Astronomía y Astronáutica 2023
+### IV Olimpiada Ecuatoriana de Astronomía y Astronáutica 2023
 _Sede de la Prueba Final de Selección: Online_
 
 1. Iván Andrés Fierro Sánchez (Quito)
@@ -58,20 +69,20 @@ _Sede de la Prueba Final de Selección: Online_
 
 5. Jaziel Saraí Gómez Barrera (Atuntaqui)
 
-### 3ra Olimpiada Ecuatoriana de Astronomía y Astronáutica 2019
+### III Olimpiada Ecuatoriana de Astronomía y Astronáutica 2019
 _Sede de la Prueba Final de Selección: Universidad Técnica de Cotopaxi_
 
 1. Daniel Alexander Villarruel Yánez (Quito)
 
-2. Pauly Sarahí Unapucha Loachamín (Quito)
+2. Daniela Paulet Santamaría Guayaquil (Guayaquil)
 
-3. Daniela Paulet Santamaría Guayaquil (Guayaquil)
+3. Pauly Sarahí Unapucha Loachamín (Quito)
 
-4. XXX
+4. José Andrés Acuña Herrera (Nueva Loja)
 
 5. Britney Carolina Robalino Ramirez (Quito)
 
-### 2da Olimpiada Ecuatoriana de Astronomía y Astronáutica 2019
+### II Olimpiada Ecuatoriana de Astronomía y Astronáutica 2019
 _Sede de la Prueba Final de Selección: Universidad Técnica de Cotopaxi_
 
 1. Bryan Garay (Guayaquil)
@@ -82,7 +93,7 @@ _Sede de la Prueba Final de Selección: Universidad Técnica de Cotopaxi_
 
 4. Daniela Santamaría (Guayaquil)
 
-### 1ra Olimpiada Ecuatoriana de Astronomía y Astronáutica 2019
+### I Olimpiada Ecuatoriana de Astronomía y Astronáutica 2019
 _Sede de la Prueba Final de Selección: Universidad Técnica de Cotopaxi_
 
 1. Emily Andrea Ayo Iza

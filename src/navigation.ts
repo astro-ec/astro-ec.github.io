@@ -19,7 +19,7 @@ export const headerData = {
       href: '#',
     },
     {
-      text: 'Ganadores',
+      text: 'Campeones Nacionales',
       href: getPermalink('/campeones-nacionales'),
     },
   ],

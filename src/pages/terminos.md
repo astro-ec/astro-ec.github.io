@@ -3,7 +3,7 @@ title: 'Términos y Condiciones de la Olimpiada Nacional y participación en Oli
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Última actualización:_ 2024
+_Última actualización:_ 2025
 
 _Con base en el Estatuto de las Olimpiadas Ecuatorianas de Astronomía y Astrofísica_
 
@@ -37,24 +37,24 @@ Cada edición de la Olimpiada Nacional se desarrolla entre los meses de julio a 
 
  Cada edición tiene el siguiente formato básico:
 
-1. **Inscripción**. (Julio a septiembre). Se lleva a cabo a través de un formulario virtual.
+1. **Inscripción**. (Agosto a octubre). Se lleva a cabo a través de un formulario virtual.
 
-2. **Fase 1**. (Octubre a noviembre). Introducción a astronomía y preparación autónoma. En esta fase los Estudiantes Participantes aprenden sobre conceptos básicos de astronomía como preparación para el Primer Examen Clasificatorio.
+2. **Fase 1**. (Octubre). Introducción a astronomía y preparación autónoma. En esta fase los Estudiantes Participantes aprenden sobre conceptos básicos de astronomía como preparación para el Primer Examen Clasificatorio.
 
 Los Estudiantes Participantes que obtengan al menos el 50% de respuestas correctas en el Primer Examen Clasificatorio clasifican a la siguiente fase.
 
-3. **Fase 2**. (Diciembre a febrero). Fundamentos de astronomía y astrofísica. En esta fase los Estudiantes Participantes pueden asistir al Entrenamiento Básico junto con instructores especializados como preparación para el Segundo Examen Clasificatorio.
+3. **Fase 2**. (Noviembre a ENERO). Fundamentos de astronomía y astrofísica. En esta fase los Estudiantes Participantes pueden asistir al Entrenamiento Básico junto con instructores especializados como preparación para el Segundo Examen Clasificatorio.
 
 Los Estudiantes Participantes que obtengan una calificación igual o superior a la media en el Segundo Examen Clasificatorio clasifican a la siguiente fase.
 
-4. **Fase 3**. (Marzo a mayo). Astronomía y astrofísica avanzada. En esta fase los Estudiantes Participantes pueden asistir al Entrenamiento Avanzado junto a instructores especializados como preparación para el Examen Final de Selección.
+4. **Fase 3**. (Febrero a abril). Astronomía y astrofísica avanzada. En esta fase los Estudiantes Participantes pueden asistir al Entrenamiento Avanzado junto a instructores especializados como preparación para el Examen Final de Selección.
 
 Los Estudiantes Participantes que obtengan los cinco mejores puntajes serán los ganadores de la edición de la Olimpiada Nacional, y formarán parte de la Delegación Ecuatoriana a la edición del año en curso de la Olimpiada Latinoamericana de Astronomía y Astronáutica.
 
 Los Estudiantes Participantes que obtengan los mejores diez puntajes podrán participar en el Examen Nacional de Selección del año siguiente para obtener un cupo para la Delegación Ecuatoriana que participe en la International Olympiad on Astronomy and Astrophysics.
 
 ---
-> **Ejemplo:** Un estudiante puede inscribirse en la 9na Olimpiada Ecuatoriana de Astronomía y Astrofísica 2026 entre julio a septiembre de 2025. Participará en la primera fase entre octubre y noviembre de 2025. Participará en la segunda fase entre diciembre de 2025 y febrero de 2026. Participará en la tercera fase entre marzo y mayo de 2026. Si queda entre los mejores cinco en el Examen Final de Selección, el estudiante podrá participar en la XVIII Olimpiada Latinoamericana de Astronomía y Astronáutica Guatemala 2026. Si ha quedado entre los primeros diez, el estudiante también podrá participar en el Examen Nacional de Selección 2027 para elegir a los miembros de la Delegación Ecuatoriana que participen en la 20th International Olympiad on Astronomy and Astrophysics 2027.
+> **Ejemplo:** Un estudiante puede inscribirse en la IX Olimpiada Ecuatoriana de Astronomía y Astrofísica 2026 entre julio a septiembre de 2025. Participará en la primera fase en octubre de 2025. Participará en la segunda fase entre noviembre de 2025 y enero de 2026. Participará en la tercera fase entre febrero y abril de 2026. Si queda entre los mejores cinco en el Examen Final de Selección, el estudiante podrá participar en la XVIII Olimpiada Latinoamericana de Astronomía y Astronáutica 2026. Si ha quedado entre los primeros diez, el estudiante también podrá participar en el Examen Nacional de Selección 2027 para elegir a los miembros de la Delegación Ecuatoriana que participen en la 20th International Olympiad on Astronomy and Astrophysics 2027.
 ---
 
 ### Requisitos de participación
