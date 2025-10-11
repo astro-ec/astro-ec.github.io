@@ -15,10 +15,6 @@ export const headerData = {
       href: '#',
     },
     {
-      text: 'Recursos',
-      href: '#',
-    },
-    {
       text: 'Campeones Nacionales',
       href: getPermalink('/campeones-nacionales'),
     },
@@ -31,16 +27,7 @@ export const footerData = {
     {
       title: 'La Olimpiada Nacional',
       links: [
-        { text: 'Cronograma 2025', href: '#' },
-        { text: 'Formato', href: '#' },
-        { text: 'Inscripción', href: '#' },
-      ],
-    },
-    {
-      title: 'Recursos',
-      links: [
-        { text: 'Exámenes Nacionales', href: '#' },
-        { text: 'Exámenes Internacionales', href: '#' },
+        { text: 'Inscripción', href: 'https://bit.ly/oeaa2026' },
       ],
     },
   ],
