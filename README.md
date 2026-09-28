@@ -1,1 +1,0 @@
-# astro-ec.github.io
