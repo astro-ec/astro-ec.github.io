@@ -1,0 +1,499 @@
+<section class="cosmos-hero" aria-labelledby="hero-title" data-cosmos-hero>
+
+  <div class="starfield" aria-hidden="true"></div>
+
+  <div class="cosmos-scene" aria-hidden="true">
+
+
+    <span class="orbit orbit-one"></span>
+    <span class="orbit orbit-two"></span>
+    <span class="orbit orbit-three"></span>
+
+    <span class="planet planet-violet">
+      <span class="planet-core"></span>
+    </span>
+
+    <span class="planet planet-cyan">
+      <span class="planet-core"></span>
+    </span>
+
+    <span class="planet planet-solar">
+      <span class="planet-core"></span>
+    </span>
+
+    <span class="planet planet-pink">
+      <span class="planet-core"></span>
+    </span>
+
+  </div>
+
+  <div class="hero-content">
+
+    <p class="hero-eyebrow">
+      <span aria-hidden="true">✦</span>
+      DESDE ECUADOR HACIA EL UNIVERSO
+      <span aria-hidden="true">✦</span>
+    </p>
+
+    <h1 id="hero-title">
+      <span class="title-line">
+        OLIMPIADAS ECUATORIANAS
+      </span>
+
+      <span class="title-line title-glow">
+        DE ASTRONOMÍA Y ASTROFÍSICA
+      </span>
+    </h1>
+
+    <p class="hero-description">
+      Curiosidad sin límites. Ciencia sin fronteras.
+    </p>
+
+  </div>
+
+  <span class="hero-corner" aria-hidden="true">
+    00° · ECUADOR
+  </span>
+
+</section>
+
+<script>
+  const hero = document.querySelector<HTMLElement>('[data-cosmos-hero]');
+
+  const allowMotion = window.matchMedia(
+    '(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)'
+  );
+
+  if (hero && allowMotion.matches) {
+    hero.addEventListener('pointermove', (event) => {
+      const rect = hero.getBoundingClientRect();
+
+      const x = (event.clientX - rect.left) / rect.width - 0.5;
+      const y = (event.clientY - rect.top) / rect.height - 0.5;
+
+      hero.style.setProperty('--parallax-x', `${x * 22}px`);
+      hero.style.setProperty('--parallax-y', `${y * 16}px`);
+    });
+
+    hero.addEventListener('pointerleave', () => {
+      hero.style.setProperty('--parallax-x', '0px');
+      hero.style.setProperty('--parallax-y', '0px');
+    });
+  }
+</script>
+
+<style>
+  .cosmos-hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    display: grid;
+    place-items: center;
+
+    width: min(1440px, calc(100% - 2rem));
+    min-height: clamp(620px, 78svh, 820px);
+    margin-inline: auto;
+
+    padding: 7rem clamp(1.25rem, 5vw, 5rem);
+
+    border: 1px solid rgb(190 190 255 / 15%);
+    border-radius: clamp(24px, 4vw, 40px);
+
+    color: #f6f7ff;
+
+    background:
+      radial-gradient(
+        ellipse at 48% 52%,
+        rgb(112 71 225 / 34%),
+        transparent 48%
+      ),
+      radial-gradient(
+        ellipse at 8% 12%,
+        rgb(78 47 178 / 50%),
+        transparent 42%
+      ),
+      radial-gradient(
+        ellipse at 95% 85%,
+        rgb(23 155 194 / 35%),
+        transparent 42%
+      ),
+      linear-gradient(
+        135deg,
+        #080d20 5%,
+        #1b1b51 55%,
+        #07182b 100%
+      );
+  }
+
+  .starfield {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+
+    background-image:
+      radial-gradient(
+        circle,
+        rgb(255 255 255 / 75%) 1px,
+        transparent 1.5px
+      ),
+      radial-gradient(
+        circle,
+        rgb(126 221 255 / 65%) 1px,
+        transparent 1.5px
+      );
+
+    background-size:
+      127px 113px,
+      193px 157px;
+
+    background-position:
+      14px 18px,
+      75px 90px;
+
+    opacity: 0.45;
+  }
+
+  .cosmos-scene {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+
+    pointer-events: none;
+
+    transform: translate3d(
+      var(--parallax-x, 0px),
+      var(--parallax-y, 0px),
+      0
+    );
+
+    transition: transform 250ms ease-out;
+  }
+
+  .orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    border: 1px solid rgb(170 186 255 / 27%);
+    border-radius: 50%;
+
+    box-shadow:
+      0 0 18px rgb(130 120 255 / 8%),
+      inset 0 0 18px rgb(130 120 255 / 5%);
+  }
+
+  .orbit-one {
+    width: 78%;
+    height: 36%;
+    transform: translate(-50%, -50%) rotate(-20deg);
+  }
+
+  .orbit-two {
+    width: 95%;
+    height: 55%;
+    transform: translate(-50%, -50%) rotate(24deg);
+  }
+
+  .orbit-three {
+    width: 48%;
+    height: 88%;
+    transform: translate(-50%, -50%) rotate(47deg);
+    opacity: 0.65;
+  }
+
+  .planet {
+    position: absolute;
+
+    display: block;
+    width: var(--size);
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+    pointer-events: auto;
+
+    transition: transform 500ms cubic-bezier(.2, 1.5, .4, 1);
+    cursor: crosshair;
+  }
+
+  .planet:hover {
+    transform:
+      translate(var(--move-x), var(--move-y))
+      scale(1.2);
+  }
+
+  .planet-core {
+    position: absolute;
+    inset: 0;
+
+    display: block;
+    border-radius: 50%;
+
+    background: var(--planet-background);
+
+    box-shadow:
+      inset -12px -12px 20px rgb(0 0 0 / 30%),
+      inset 5px 5px 12px rgb(255 255 255 / 25%),
+      0 0 30px var(--planet-glow);
+
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .planet:hover .planet-core {
+    animation-play-state: paused;
+  }
+
+  .planet-violet {
+    --size: 78px;
+    --move-x: 18px;
+    --move-y: -25px;
+
+    --planet-background:
+      radial-gradient(
+        circle at 28% 25%,
+        #e0b6ff,
+        #8064e8 55%,
+        #30206d
+      );
+
+    --planet-glow: rgb(148 115 255 / 48%);
+
+    top: 19%;
+    left: 12%;
+  }
+
+
+  .planet-cyan {
+    --size: 53px;
+    --move-x: -25px;
+    --move-y: 16px;
+
+    --planet-background:
+      radial-gradient(
+        circle at 30% 25%,
+        #c4ffff,
+        #39bfd9 55%,
+        #10547f
+      );
+
+    --planet-glow: rgb(64 220 255 / 50%);
+
+    top: 27%;
+    right: 13%;
+  }
+
+  .planet-cyan .planet-core {
+    animation-delay: -2s;
+  }
+
+  .planet-solar {
+    --size: 55px;
+    --move-x: 20px;
+    --move-y: -18px;
+
+    --planet-background:
+      radial-gradient(
+        circle at 30% 25%,
+        #ffe8ac,
+        #f4a44c 55%,
+        #9d4656
+      );
+
+    --planet-glow: rgb(255 170 85 / 45%);
+
+    bottom: 19%;
+    left: 20%;
+  }
+
+  .planet-solar .planet-core {
+    animation-delay: -3s;
+  }
+
+  .planet-solar .planet-core::after {
+    content: '';
+
+    position: absolute;
+    inset: 37% -30%;
+
+    border: 5px solid rgb(255 207 141 / 70%);
+    border-radius: 50%;
+
+    transform: rotate(-28deg);
+    box-shadow: 0 0 12px rgb(255 180 100 / 30%);
+  }
+
+  .planet-pink {
+    --size: 27px;
+    --move-x: -18px;
+    --move-y: -22px;
+
+    --planet-background:
+      radial-gradient(
+        circle at 28% 25%,
+        #ffc4da,
+        #f36caa 60%,
+        #80377f
+      );
+
+    --planet-glow: rgb(255 105 185 / 55%);
+
+    right: 22%;
+    bottom: 16%;
+  }
+
+  .planet-pink .planet-core {
+    animation-delay: -4s;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    margin: 0 0 2rem;
+
+    color: #b4b9e8;
+
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+  }
+
+  .hero-eyebrow span {
+    color: #70e5f0;
+    margin-inline: 0.6rem;
+  }
+
+  h1 {
+    margin: 0;
+
+    font-family: var(--font-heading);
+    font-size: clamp(2.15rem, 5vw, 5rem);
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -0.055em;
+
+    text-wrap: balance;
+  }
+
+  .title-line {
+    display: block;
+    color: #f6f7ff;
+  }
+
+  .title-glow {
+    margin-top: 0.18em;
+
+    background: linear-gradient(
+      105deg,
+      #c4adff 5%,
+      #ffffff 47%,
+      #72eaff 95%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    filter: drop-shadow(0 0 24px rgb(153 126 255 / 42%));
+  }
+
+  .hero-description {
+    margin: 2.5rem 0 0;
+
+    color: #c0c9e5;
+    font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+    font-weight: 400;
+    letter-spacing: 0.015em;
+  }
+
+  .hero-corner {
+    position: absolute;
+    right: 2rem;
+    bottom: 1.5rem;
+
+    color: rgb(200 215 255 / 45%);
+
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    letter-spacing: 0.18em;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-11px);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .cosmos-hero {
+      min-height: 620px;
+      padding: 6rem 1.25rem;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+    }
+
+    .planet-violet {
+      --size: 48px;
+      top: 11%;
+      left: 8%;
+    }
+
+    .planet-cyan {
+      --size: 36px;
+      top: 17%;
+      right: 8%;
+    }
+
+    .planet-solar {
+      --size: 40px;
+      left: 12%;
+      bottom: 13%;
+    }
+
+    .planet-pink {
+      right: 13%;
+      bottom: 13%;
+    }
+
+    .orbit-one {
+      width: 130%;
+    }
+
+    .orbit-two {
+      width: 150%;
+    }
+
+    .orbit-three {
+      width: 100%;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .cosmos-scene,
+    .planet {
+      transition: none;
+    }
+
+    .planet-core {
+      animation: none;
+    }
+
+    .planet:hover {
+      transform: none;
+    }
+  }
+</style>
