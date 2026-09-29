@@ -1,0 +1,256 @@
+---
+const links = [
+  { label: 'Inicio', href: '/' },
+  { label: 'Olimpiada Nacional', href: '/#olimpiada' },
+  { label: 'Academico', href: '/#academico' },
+  { label: 'Ediciones', href: '/#ediciones' },
+  { label: 'Nosotros', href: '/#nosotros' },
+];
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+
+    <a class="brand" href="/" aria-label="OEAA — Inicio">
+      <img
+        src="/images/logo-dark.svg"
+        alt=""
+        width="54"
+        height="54"
+      />
+
+      <span class="brand-text">
+        <span class="brand-title">OEAA</span>
+        <span class="brand-subtitle">
+          Astronomía y Astrofísica · Ecuador
+        </span>
+      </span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      {links.map((link) => (
+        <a href={link.href}>{link.label}</a>
+      ))}
+    </nav>
+
+    <a href="/#participa" class="button button-primary desktop-cta">
+      ✦ Participa
+    </a>
+
+    <!-- Mobile navigation -->
+    <details class="mobile-nav">
+      <summary class="menu-toggle">
+        Menú
+        <span class="menu-icon" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </summary>
+
+      <nav class="mobile-panel" aria-label="Navegación móvil">
+        {links.map((link) => (
+          <a href={link.href}>{link.label}</a>
+        ))}
+
+        <a href="/#participa" class="button button-primary">
+          ✦ Participa
+        </a>
+      </nav>
+    </details>
+
+  </div>
+</header>
+
+<style>
+
+
+.site-header {
+  position: sticky;
+  top: 1rem;
+  z-index: 100;
+
+  width: min(1200px, calc(100% - 2rem));
+  margin: 1rem auto 0;
+
+  background: var(--glass-background);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+
+  box-shadow: 0 8px 32px var(--color-shadow);
+}
+
+
+
+  .header-inner {
+    min-height: var(--header-height);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+
+  .brand img {
+    width: 54px;
+    height: 54px;
+    transition: transform 350ms ease;
+  }
+
+  .brand:hover img {
+    transform: rotate(-9deg) scale(1.05);
+  }
+
+  .brand-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brand-title {
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+    color: var(--color-brand);
+  }
+
+  .brand-subtitle {
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: var(--color-muted);
+    letter-spacing: 0.01em;
+  }
+
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: clamp(1rem, 2vw, 2rem);
+    margin-left: auto;
+  }
+
+  .desktop-nav a {
+    font-size: 0.88rem;
+    font-weight: 500;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color var(--transition);
+  }
+
+  .desktop-nav a:hover {
+    color: var(--color-brand);
+  }
+
+  .desktop-cta {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .mobile-nav {
+    display: none;
+    position: relative;
+    margin-left: auto;
+  }
+
+  .menu-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.65rem 0.9rem;
+
+    border-radius: var(--radius-sm);
+    background: var(--color-brand-light);
+    color: var(--color-brand);
+
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+  }
+
+  .menu-toggle::-webkit-details-marker {
+    display: none;
+  }
+
+  .menu-icon {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .menu-icon span {
+    width: 18px;
+    height: 2px;
+    background: currentColor;
+    border-radius: 2px;
+    transition: transform var(--transition), opacity var(--transition);
+  }
+
+  .mobile-nav[open] .menu-icon span:first-child {
+    transform: translateY(6px) rotate(45deg);
+  }
+
+  .mobile-nav[open] .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .mobile-nav[open] .menu-icon span:last-child {
+    transform: translateY(-6px) rotate(-45deg);
+  }
+
+  .mobile-panel {
+  background: var(--color-glass);
+  backdrop-filter: blur(22px) saturate(160%);
+  -webkit-backdrop-filter: blur(22px) saturate(160%);
+
+  border: 1px solid var(--color-glass-border);
+  box-shadow: 0 16px 40px var(--color-shadow);
+}
+
+  .mobile-panel > a:not(.button) {
+    padding: 0.75rem 0.9rem;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    font-size: 0.95rem;
+  }
+
+  .mobile-panel > a:not(.button):hover {
+    background: var(--color-brand-light);
+    color: var(--color-brand);
+  }
+
+  .mobile-panel .button {
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 1020px) {
+    .desktop-nav,
+    .desktop-cta {
+      display: none;
+    }
+
+    .mobile-nav {
+      display: block;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .brand-subtitle {
+      display: none;
+    }
+
+    .brand img {
+      width: 46px;
+      height: 46px;
+    }
+  }
+</style>
