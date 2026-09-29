@@ -1,13 +1,7 @@
 ---
-const year = new Date().getFullYear();
+import { navigationLinks } from '../data/navigation';
 
-const links = [
-  { label: 'Inicio', href: '/' },
-  { label: 'Olimpiada Nacional', href: '/#olimpiada' },
-  { label: 'Academico', href: '/#academico' },
-  { label: 'Ediciones', href: '/#ediciones' },
-  { label: 'Nosotros', href: '/#nosotros' },
-];
+const year = new Date().getFullYear();
 ---
 
 <footer class="site-footer">
@@ -34,7 +28,7 @@ const links = [
     <nav class="footer-navigation" aria-label="Navegación del pie de página">
       <span class="footer-heading">Explora</span>
 
-      {links.map((link) => (
+      {navigationLinks.map((link) => (
         <a href={link.href}>{link.label}</a>
       ))}
     </nav>

@@ -1,0 +1,120 @@
+<div class="theme-toggle" role="group" aria-label="Tema visual">
+  <button
+    type="button"
+    data-theme-option="auto"
+    aria-label="Tema automático"
+    title="Según el sistema"
+  >A</button>
+
+  <button
+    type="button"
+    data-theme-option="light"
+    aria-label="Tema claro"
+    title="Tema claro"
+  >☀</button>
+
+  <button
+    type="button"
+    data-theme-option="dark"
+    aria-label="Tema oscuro"
+    title="Tema oscuro"
+  >☾</button>
+</div>
+
+<script>
+  type Theme = 'auto' | 'light' | 'dark';
+
+  const buttons =
+    document.querySelectorAll<HTMLButtonElement>(
+      '[data-theme-option]'
+    );
+
+  function updateButtons() {
+    const active =
+      document.documentElement.dataset.theme || 'auto';
+
+    buttons.forEach((button) => {
+      button.setAttribute(
+        'aria-pressed',
+        String(button.dataset.themeOption === active)
+      );
+    });
+  }
+
+  function setTheme(theme: Theme) {
+    if (theme === 'auto') {
+      document.documentElement.removeAttribute('data-theme');
+    } else {
+      document.documentElement.dataset.theme = theme;
+    }
+
+    try {
+      if (theme === 'auto') {
+        localStorage.removeItem('oeaa-theme');
+      } else {
+        localStorage.setItem('oeaa-theme', theme);
+      }
+    } catch {
+    }
+
+    updateButtons();
+  }
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      setTheme(button.dataset.themeOption as Theme);
+    });
+  });
+
+  updateButtons();
+</script>
+
+<style>
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+
+    padding: 4px;
+
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-pill);
+
+    background: var(--glass-background);
+    flex-shrink: 0;
+  }
+
+  .theme-toggle button {
+    display: grid;
+    place-items: center;
+
+    width: 34px;
+    height: 34px;
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+
+    background: transparent;
+    color: var(--color-muted);
+
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition:
+      background var(--transition),
+      color var(--transition),
+      transform var(--transition);
+  }
+
+  .theme-toggle button:hover {
+    color: var(--color-brand);
+    transform: scale(1.08);
+  }
+
+  .theme-toggle button[aria-pressed='true'] {
+    background: var(--color-brand-soft);
+    color: var(--color-brand);
+  }
+</style>

@@ -23,12 +23,6 @@
 --color-border: light-dark(#d8dff0, #2d3b5b);
 --color-focus: var(--color-cyan);
 
---color-glass: light-dark(
-  rgb(255 255 255 / 65%),
-  rgb(13 20 43 / 62%)
-);
-
-
 --glow-violet: light-dark(#dedaff, #38318c);
 --glow-cyan: light-dark(#cff3fc, #105978);
 
@@ -79,7 +73,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: calc(var(--header-height) + 20px);
+  scroll-padding-top: calc(var(--header-height) + 3rem);
 }
 
 body {
@@ -196,6 +190,7 @@ button, input, textarea, select {
   *::before,
   *::after {
     animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
