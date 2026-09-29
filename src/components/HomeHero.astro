@@ -46,13 +46,13 @@
     </h1>
 
     <p class="hero-description">
-      Curiosidad sin límites. Ciencia sin fronteras.
+      Starry skies for everyone.
     </p>
 
   </div>
 
   <span class="hero-corner" aria-hidden="true">
-    00° · ECUADOR
+    00°00'00'' · ECUADOR
   </span>
 
 </section>
@@ -83,49 +83,24 @@
 </script>
 
 <style>
-  .cosmos-hero {
-    position: relative;
-    isolation: isolate;
-    overflow: hidden;
 
-    display: grid;
-    place-items: center;
+.cosmos-hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
 
-    width: min(1440px, calc(100% - 2rem));
-    min-height: clamp(620px, 78svh, 820px);
-    margin-inline: auto;
+  display: grid;
+  place-items: center;
 
-    padding: 7rem clamp(1.25rem, 5vw, 5rem);
+  width: 100%;
+  min-height: clamp(620px, 78svh, 820px);
+  margin-inline: auto;
 
-    border: 1px solid rgb(190 190 255 / 15%);
-    border-radius: clamp(24px, 4vw, 40px);
+  padding: 7rem clamp(1.25rem, 5vw, 5rem);
 
-    color: #f6f7ff;
-
-    background:
-      radial-gradient(
-        ellipse at 48% 52%,
-        rgb(112 71 225 / 34%),
-        transparent 48%
-      ),
-      radial-gradient(
-        ellipse at 8% 12%,
-        rgb(78 47 178 / 50%),
-        transparent 42%
-      ),
-      radial-gradient(
-        ellipse at 95% 85%,
-        rgb(23 155 194 / 35%),
-        transparent 42%
-      ),
-      linear-gradient(
-        135deg,
-        #080d20 5%,
-        #1b1b51 55%,
-        #07182b 100%
-      );
-  }
-
+  color: var(--color-ink);
+  background: transparent;
+}
   .starfield {
     position: absolute;
     inset: 0;
@@ -133,16 +108,16 @@
     pointer-events: none;
 
     background-image:
-      radial-gradient(
-        circle,
-        rgb(255 255 255 / 75%) 1px,
-        transparent 1.5px
-      ),
-      radial-gradient(
-        circle,
-        rgb(126 221 255 / 65%) 1px,
-        transparent 1.5px
-      );
+  radial-gradient(
+    circle,
+    light-dark(rgb(63 61 155 / 60%), rgb(255 255 255 / 75%)) 1px,
+    transparent 1.5px
+  ),
+  radial-gradient(
+    circle,
+    light-dark(rgb(0 126 148 / 50%), rgb(126 221 255 / 65%)) 1px,
+    transparent 1.5px
+  );
 
     background-size:
       127px 113px,
@@ -172,17 +147,19 @@
   }
 
   .orbit {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
 
-    border: 1px solid rgb(170 186 255 / 27%);
-    border-radius: 50%;
+  border: 1px solid
+    color-mix(in srgb, var(--color-brand) 30%, transparent);
 
-    box-shadow:
-      0 0 18px rgb(130 120 255 / 8%),
-      inset 0 0 18px rgb(130 120 255 / 5%);
-  }
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 18px color-mix(in srgb, var(--color-brand) 8%, transparent),
+    inset 0 0 18px color-mix(in srgb, var(--color-brand) 5%, transparent);
+}
 
   .orbit-one {
     width: 78%;
@@ -404,26 +381,62 @@
     filter: drop-shadow(0 0 24px rgb(153 126 255 / 42%));
   }
 
-  .hero-description {
-    margin: 2.5rem 0 0;
 
-    color: #c0c9e5;
-    font-size: clamp(0.95rem, 1.4vw, 1.15rem);
-    font-weight: 400;
-    letter-spacing: 0.015em;
-  }
+.hero-eyebrow {
+  color: var(--color-muted);
+  /* Keep the other existing properties */
+}
 
-  .hero-corner {
-    position: absolute;
-    right: 2rem;
-    bottom: 1.5rem;
+.hero-eyebrow span {
+  color: var(--color-cyan);
+  margin-inline: 0.6rem;
+}
 
-    color: rgb(200 215 255 / 45%);
+.title-line {
+  display: block;
+  color: var(--color-ink);
+}
 
-    font-family: var(--font-heading);
-    font-size: 0.65rem;
-    letter-spacing: 0.18em;
-  }
+.title-glow {
+  margin-top: 0.18em;
+
+  background: linear-gradient(
+    105deg,
+    var(--color-brand) 5%,
+    var(--color-ink) 47%,
+    var(--color-cyan) 95%
+  );
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  filter: drop-shadow(
+    0 0 24px color-mix(in srgb, var(--color-brand) 35%, transparent)
+  );
+}
+
+.hero-description {
+  margin: 2.5rem 0 0;
+  color: var(--color-muted);
+
+  font-size: clamp(0.95rem, 1.4vw, 1.15rem);
+  font-weight: 400;
+  letter-spacing: 0.015em;
+}
+
+.hero-corner {
+  position: absolute;
+  right: 2rem;
+  bottom: 1.5rem;
+
+  color: var(--color-muted);
+  opacity: 0.65;
+
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+}
 
   @keyframes float {
     0%, 100% {

@@ -171,16 +171,16 @@ import { navigationLinks, participateHref } from '../data/navigation';
     font-family: var(--font-heading);
     font-size: 1.45rem;
     font-weight: 700;
-    line-height: 1.15;
-    letter-spacing: -0.04em;
-    color: var(--color-brand);
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    color: var(--color-muted);
   }
 
   .brand-subtitle {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
     font-weight: 500;
     color: var(--color-muted);
-    letter-spacing: 0.01em;
+    letter-spacing: 0.03em;
   }
 
   .desktop-nav {
@@ -209,7 +209,7 @@ import { navigationLinks, participateHref } from '../data/navigation';
 
   .mobile-nav {
   display: none;
-  position: relative;
+  position: static;
 }
 
   .menu-toggle {
@@ -258,27 +258,30 @@ import { navigationLinks, participateHref } from '../data/navigation';
     transform: translateY(-6px) rotate(-45deg);
   }
 
-  .mobile-panel {
+
+.mobile-panel {
   position: absolute;
   top: calc(100% + 0.75rem);
   right: 0;
-  z-index: 1;
+  z-index: 10;
 
   display: flex;
   flex-direction: column;
 
-  width: min(320px, calc(100vw - 3rem));
+  width: min(320px, calc(100vw - 2rem));
   padding: 0.8rem;
 
-  background: var(--glass-background);
-  border: 1px solid var(--glass-border);
+  /* Solid surface for better readability */
+  background: var(--color-surface);
+  color: var(--color-ink);
+
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
 
-  backdrop-filter: blur(22px) saturate(160%);
-  -webkit-backdrop-filter: blur(22px) saturate(160%);
-
-  box-shadow: 0 16px 40px var(--color-shadow);
+  box-shadow:
+    0 16px 48px var(--color-shadow);
 }
+
 
   .mobile-panel > a:not(.button) {
     padding: 0.75rem 0.9rem;

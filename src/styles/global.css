@@ -18,7 +18,7 @@
 --color-surface-alt: light-dark(#e9eeff, #1b2a4a);
 
 --color-ink: light-dark(#10172f, #f5f7ff);
---color-muted: light-dark(#526079, #aebbd4);
+--color-muted: light-dark(#000000, #ffffff);
 
 --color-border: light-dark(#d8dff0, #2d3b5b);
 --color-focus: var(--color-cyan);
