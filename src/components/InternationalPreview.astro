@@ -1,0 +1,268 @@
+---
+interface Delegation {
+  event: string;
+  year: number;
+  image: string | null;
+  alt: string;
+  photographer: string | null;
+  creditUrl: string | null;
+}
+
+const delegations: Delegation[] = [
+  {
+    event: 'OLAA',
+    year: 2026,
+    image: '/images/OLAA2026.jpg',
+    alt: 'Delegación ecuatoriana en la XVIII OLAA 2026',
+    photographer: 'Daniel Villarruel-Yánez',
+    creditUrl: null,
+  },
+  {
+    event: 'IOAA',
+    year: 2026,
+    image: '/images/IOAA2026.jpg',
+    alt: 'Delegación ecuatoriana en la 19th IOAA 2026',
+    photographer: 'IOAA 2026 LOC',
+    creditUrl: null,
+  },
+];
+---
+
+<section
+  id="internacional"
+  class="international-preview"
+  aria-labelledby="international-title"
+>
+  <div class="container">
+
+    <p class="section-label">
+      PARTICIPACIÓN INTERNACIONAL
+    </p>
+
+    <h2 id="international-title">
+      Delegaciones Ecuatorianas · 2026
+    </h2>
+
+    <div class="delegations-grid">
+
+      {delegations.map((delegation) => (
+
+        <figure class="delegation">
+
+          <div class="photo-frame">
+
+            {delegation.image ? (
+              <img
+                src={delegation.image}
+                alt={delegation.alt}
+                loading="lazy"
+                decoding="async"
+              />
+            ) : (
+              <div class="photo-placeholder">
+                <span>
+                  Fotografía {delegation.event} {delegation.year}
+                </span>
+              </div>
+            )}
+
+          </div>
+
+          <figcaption class="delegation-caption">
+
+            <h3>
+              {delegation.event} {delegation.year}
+            </h3>
+
+            {delegation.image && (
+              <p class="photo-credit">
+                Fotografía:
+
+                {delegation.photographer ? (
+                  delegation.creditUrl ? (
+                    <a
+                      href={delegation.creditUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {delegation.photographer}
+                    </a>
+                  ) : (
+                    <span>{delegation.photographer}</span>
+                  )
+                ) : (
+                  <span>Autor por confirmar</span>
+                )}
+              </p>
+            )}
+
+          </figcaption>
+
+        </figure>
+
+      ))}
+
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .international-preview {
+    width: 100%;
+
+    padding-block-start: 0;
+    padding-block-end: clamp(2.5rem, 5vw, 5rem);
+  }
+
+  .section-label {
+    margin: 0 0 1.5rem;
+
+    color: var(--color-brand);
+
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+  }
+
+  h2 {
+    margin: 0 0 clamp(2rem, 4vw, 3rem);
+
+    color: var(--color-ink);
+
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 3.7vw, 3.4rem);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.045em;
+
+    text-wrap: balance;
+  }
+
+  .delegations-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(1.5rem, 3vw, 3rem);
+  }
+
+  .delegation {
+    min-width: 0;
+    margin: 0;
+  }
+
+  .photo-frame {
+    overflow: hidden;
+
+    display: grid;
+    place-items: center;
+
+    width: 100%;
+    aspect-ratio: 3 / 2;
+
+    background: var(--color-surface-alt);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+
+    box-shadow:
+      0 12px 36px var(--color-shadow);
+  }
+
+  .photo-frame img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+  }
+
+  .photo-placeholder {
+    display: grid;
+    place-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 2rem;
+
+    color: var(--color-muted);
+    text-align: center;
+
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+
+    background:
+      radial-gradient(
+        circle at 50% 50%,
+        color-mix(
+          in srgb,
+          var(--color-brand) 12%,
+          transparent
+        ),
+        transparent 70%
+      );
+  }
+
+  .delegation-caption {
+    margin-top: 1.25rem;
+  }
+
+  h3 {
+    margin: 0;
+
+    color: var(--color-ink);
+
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.025em;
+  }
+
+  .photo-credit {
+    margin: 0.35rem 0 0;
+
+    color: var(--color-muted);
+
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
+
+  .photo-credit a {
+    margin-left: 0.25rem;
+
+    color: inherit;
+
+    text-decoration: underline;
+    text-decoration-color: var(--color-border);
+    text-underline-offset: 3px;
+
+    transition: color var(--transition);
+  }
+
+  .photo-credit a:hover {
+    color: var(--color-brand);
+  }
+
+  @media (max-width: 760px) {
+    .delegations-grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .international-preview {
+      padding-block-end: 3rem;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    .delegation-caption {
+      margin-top: 1rem;
+    }
+  }
+</style>

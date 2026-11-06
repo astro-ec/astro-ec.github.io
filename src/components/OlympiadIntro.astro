@@ -1,0 +1,199 @@
+<section
+    id="olimpiada"
+    class="olympiad-intro"
+    aria-labelledby="olympiad-intro-title"
+>
+    <div class="container intro-layout">
+        <div class="intro-content">
+            <p class="section-label">
+                ¡BIENVENID@ A LA OLIMPIADA DE ASTRONOMÍA!
+            </p>
+
+            <h2 id="olympiad-intro-title">
+                Explora el Universo · Desafía tus límites
+            </h2>
+
+            <p class="intro-lead">
+                La Olimpiada Ecuatoriana de Astronomía y Astrofísica
+                es una competencia nacional dirigida a estudiantes de
+                nivel secundario (EGB superior y Bachillerato) entre
+                14 y 18 años. Además de pruebas, incluye entrenamiento
+                y talleres de resolución de problemas. ¡Lo único que
+                necesitas es tu curiosidad y ganas de aprender!
+            </p>
+
+            <p>
+                La Olimpiada es el selectivo nacional para representar al
+                Ecuador en la Olimpiada Latinoamericana de Astronomía y
+                Astrofísica (OLAA) y la International Olympiad on Astronomy
+                and Astrophysics (IOAA).
+            </p>
+
+        </div>
+
+        <figure class="intro-visual">
+
+            <img
+                src="https://cdn.esahubble.org/archives/images/screen/heic0604d.jpg"
+                alt="Imagen compuesta de la galaxia M82, con emisiones de gas y regiones de formación estelar observadas en distintas longitudes de onda."
+                width="1000"
+                height="812"
+                loading="lazy"
+                decoding="async"
+            />
+
+            <figcaption>
+                <span>Messier 82 (M82)</span>
+                <span class="image-credit">
+                    Crédito:
+                    <a
+                        href="https://esahubble.org/images/heic0604d/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        NASA, ESA, CXC, and JPL-Caltech
+                    </a>
+                </span>
+            </figcaption>
+        </figure>
+    </div>
+</section>
+
+<style>
+    .olympiad-intro {
+        width: 100%;
+        padding-block-start: clamp(4rem, 8vw, 8rem);
+        padding-block-end: clamp(1.5rem, 2.5vw, 2.5rem);
+    }
+
+    .intro-layout {
+        display: grid;
+        grid-template-columns: 1.05fr 1fr;
+        align-items: center;
+        gap: clamp(3rem, 6vw, 6rem);
+    }
+
+    .intro-content {
+        max-width: 570px;
+    }
+
+    .section-label {
+        margin: 0 0 1.5rem;
+
+        color: var(--color-brand);
+
+        font-family: var(--font-heading);
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+    }
+
+    h2 {
+        margin: 0 0 2rem;
+
+        color: var(--color-ink);
+
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 3.7vw, 3.4rem);
+        font-weight: 700;
+        line-height: 1.12;
+        letter-spacing: -0.045em;
+
+        text-wrap: balance;
+    }
+
+    .intro-content p:not(.section-label) {
+        margin: 0 0 1.25rem;
+
+        color: var(--color-muted);
+
+        font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+        line-height: 1.8;
+    }
+
+    .intro-content .intro-lead {
+        color: var(--color-ink) !important;
+        font-weight: 500;
+    }
+
+    .intro-content p:last-child {
+        margin-bottom: 0;
+    }
+
+    .intro-visual {
+        margin: 0;
+        min-width: 0;
+    }
+
+    .intro-visual img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+
+        background: var(--color-surface);
+
+        box-shadow: 0 16px 48px var(--color-shadow);
+    }
+
+    figcaption {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.35rem 1rem;
+
+        margin-top: 0.9rem;
+
+        color: var(--color-muted);
+
+        font-size: 0.72rem;
+        line-height: 1.5;
+    }
+
+    .image-credit a {
+        color: inherit;
+
+        text-decoration: underline;
+        text-decoration-color: var(--color-border);
+        text-underline-offset: 3px;
+
+        transition: color var(--transition);
+    }
+
+    .image-credit a:hover {
+        color: var(--color-brand)
+    }
+
+    @media (max-width: 820px) {
+        .intro-layout {
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        .intro-content {
+            max-width: 680px;
+        }
+
+        .intro-visual {
+            width: 100%;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .olympiad-intro {
+            padding-block-start: 4rem;
+            padding-block-end: 1.5rem;
+        }
+
+        h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .intro-content p:not(.section-label) {
+            line-height: 1.75;
+        }
+    }
+</style>

@@ -6,4 +6,4 @@ export const navigationLinks = [
   { label: 'Nosotros', href: '/#nosotros' },
 ] as const;
 
-export const participateHref = '/#participa';
+export const participateHref = 'https://bit.ly/oeaa2027';

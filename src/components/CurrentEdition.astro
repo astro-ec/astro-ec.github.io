@@ -1,0 +1,262 @@
+---
+import { participateHref } from "../data/navigation";
+const programmeHref = 'https://bit.ly/oeaa2027_programa';
+---
+
+<section
+    id="edicion-actual"
+    class="current-edition"
+    aria-labelledby="current-edition-title"
+>
+    <div class="container">
+
+        <p class="section-label">
+            EDICIÓN ACTUAL
+        </p>
+
+        <div class="edition-card">
+            <div class="edition-content">
+                <h2>
+                    X Olimpiada Ecuatoriana de
+                    Astronomía y Astrofísica 2027
+                </h2>
+
+                <p class="edition-description">
+                    Selección de candidatos para la
+                    XIX OLAA 2027 y la 21st IOAA 2028.
+                </p>
+
+                <div class="edition-actions">
+                    <a
+                        href={participateHref}
+                        class="button button-primary edition-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                    Formulario de inscripción
+                    <span aria-hidden="true">↗</span>
+                    </a>
+
+                    <a
+                        href={programmeHref}
+                        class="button button-seconday edition-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                    Programa (PDF)
+                    <span aria-hidden="true">↗</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="edition-visual">
+                <div class="edition-logo">
+                    <img
+                        src="/images/10th_logo.png"
+                        alt="Logotipo de la X NAO 2027"
+                        width="1248"
+                        height="1248"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .current-edition {
+        width: 100%;
+        padding-block-start: clamp(1rem, 1.5vw, 1.5rem);
+        padding-block-end: clamp(3rem, 5vw, 5rem);
+    }
+
+    .section-label {
+        margin: 0 0 1.5rem;
+
+        color: var(--color-brand);
+
+        font-family: var(--font-heading);
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+    }
+
+    .edition-card {
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+
+        display: grid;
+        grid-template-columns:
+            minmax(0, 1.5fr)
+            minmax(240px, 0.7fr);
+
+        align-items: center;
+
+        gap: clamp(2rem, 5vw, 5rem);
+
+        padding: clamp(2rem, 5vw, 5rem);
+
+        background:
+            radial-gradient(
+                circle at 85% 35%,
+                color-mix(
+                    in srgb,
+                    var(--color-brand) 12%,
+                    transparent
+                ),
+                transparent 60%
+            ),
+            var(--color-surface);
+
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+
+        box-shadow: 0 16px 48px var(--color-shadow);
+    }
+
+    .edition-content {
+        position: relative;
+        z-index: 1;
+
+        min-width: 0;
+    }
+
+    h2 {
+        margin: 0 0 1.75rem;
+
+        color: var(--color-ink);
+
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 3.6vw, 3rem);
+        font-weight: 700;
+        line-height: 1.3;
+        letter-spacing: -0.045em;
+
+        text-wrap: balance;
+    }
+
+    .edition-description {
+        max-width: 580px;
+
+        margin: 0 0 2.5rem;
+
+        color: var(--color-muted);
+
+        font-size: clamp(1rem, 1.4vw, 1.1rem);
+        font-weight: 500;
+        line-height: 1.7;
+    }
+
+    .edition-actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        gap: 0.85rem;
+    }
+
+    .edition-button {
+        min-height: 48px;
+        padding: 0.85rem 1.5rem;
+
+        font-size: 0.9rem;
+        white-space: nowrap;
+    }
+
+    .edition-button span {
+        margin-left: 0.35rem;
+    }
+
+    .edition-visual {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        min-width: 0;
+    }
+
+    .edition-logo {
+        width: min(100%, 340px);
+
+        padding: clamp(0.75rem, 2vw, 1.25rem);
+
+        background: #ffffff;
+
+        border: 1px solid
+            rbg(20 40 80 / 8%);
+
+        border-radius: var(--radius-lg);
+
+        box-shadow: 0 12px 36px var(--color-shadow);
+    }
+
+    .edition-logo img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        object-fit: contain;
+    }
+
+    @media (max-width: 900px) {
+        .edition-card {
+            grid-template-columns: 1fr;
+            gap: 3rem;
+        }
+
+        .edition-visual {
+            justify-content: flex-start;
+        }
+
+        .edition-logo {
+            width: min(100%, 260px);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .current-edition {
+            padding-block-start: 1rem;
+            padding-block-end: 3rem;
+        }
+
+        .edition-card {
+            padding: 2rem 1.5rem;
+            gap: 2.5rem;
+        }
+
+        h2 {
+            margin-bottom: 1.5rem;
+
+            font-size: clamp(1.8rem, 7vw, 2.5rem);
+        }
+
+        .edition-description {
+            margin-bottom: 2rem;
+
+            font-size: 1rem;
+        }
+
+        .edition-actions {
+            align-items: stretch;
+            flex-direction: column;
+        }
+
+        .edition-button {
+            width: 100%;
+            white-space: normal;
+            text-align: center;
+        }
+
+        .edition-visual {
+            justify-content: center;
+        }
+
+        .edition-logo {
+            width: min(100%, 220px);
+        }
+    }
+</style>

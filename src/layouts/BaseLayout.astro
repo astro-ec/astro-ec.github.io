@@ -7,11 +7,13 @@ import SiteFooter from '../components/SiteFooter.astro';
 interface Props {
   title?: string;
   description?: string;
+  flushMainTop?: boolean;
 }
 
 const {
   title,
   description = 'Olimpiadas Ecuatorianas de Astronomía y Astrofísica. Explora, aprende y descubre el universo.',
+  flushMainTop = false,
 } = Astro.props;
 
 const pageTitle = title
@@ -55,7 +57,7 @@ const pageTitle = title
 
       <SiteHeader />
 
-      <main id="contenido">
+      <main id="contenido" class:list={{ 'main--flush-top': flushMainTop}}>
         <slot />
       </main>
 
@@ -78,6 +80,10 @@ const pageTitle = title
     flex: 1;
     width: 100%;
     padding-block-start: clamp(2rem, 5vw, 4rem);
+  }
+
+  main.main--flush-top {
+    padding-block-start: 0;
   }
 
   .skip-link {

@@ -1,9 +1,19 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
 import HomeHero from '../components/HomeHero.astro';
+import OlympiadIntro from '../components/OlympiadIntro.astro';
+import CurrentEdition from '../components/CurrentEdition.astro'
+import InternationalPreview from '../components/InternationalPreview.astro';
 ---
 
 
-<BaseLayout title="Inicio">
+<BaseLayout title="Inicio" flushMainTop>
   <HomeHero />
+
+  <OlympiadIntro />
+
+  <CurrentEdition />
+
+  <InternationalPreview />
 </BaseLayout>

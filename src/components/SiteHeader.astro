@@ -44,7 +44,7 @@ import { navigationLinks, participateHref } from '../data/navigation';
     <div class="header-actions">
   <ThemeToggle />
 
-    <a href="/#participa" class="button button-primary desktop-cta">
+    <a href={participateHref} class="button button-primary desktop-cta">
       ✦ Participa
     </a>
 
@@ -63,7 +63,7 @@ import { navigationLinks, participateHref } from '../data/navigation';
           <a href={link.href}>{link.label}</a>
         ))}
 
-        <a href="/#participa" class="button button-primary">
+        <a href={participateHref} class="button button-primary">
           ✦ Participa
         </a>
       </nav>
@@ -329,10 +329,6 @@ import { navigationLinks, participateHref } from '../data/navigation';
   }
 
   .brand-text {
-    display: none;
-  }
-
-  .menu-label {
     display: none;
   }
 

@@ -191,7 +191,6 @@
     pointer-events: auto;
 
     transition: transform 500ms cubic-bezier(.2, 1.5, .4, 1);
-    cursor: crosshair;
   }
 
   .planet:hover {
@@ -329,12 +328,14 @@
 
     width: 100%;
     text-align: center;
+
+    transform: translateY(-0.75rem);
   }
 
   .hero-eyebrow {
     margin: 0 0 2rem;
 
-    color: #b4b9e8;
+    color: var(--color-muted);
 
     font-family: var(--font-heading);
     font-size: 0.75rem;
@@ -343,7 +344,7 @@
   }
 
   .hero-eyebrow span {
-    color: #70e5f0;
+    color: var(--color-cyan);
     margin-inline: 0.6rem;
   }
 
@@ -361,7 +362,7 @@
 
   .title-line {
     display: block;
-    color: #f6f7ff;
+    color: var(--color-ink);
   }
 
   .title-glow {
@@ -369,52 +370,20 @@
 
     background: linear-gradient(
       105deg,
-      #c4adff 5%,
-      #ffffff 47%,
-      #72eaff 95%
+      var(--color-brand) 5%,
+      var(--color-ink)  47%,
+      var(--color-cyan) 95%
     );
 
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
 
-    filter: drop-shadow(0 0 24px rgb(153 126 255 / 42%));
+    filter: drop-shadow(
+      0 0 24px
+      color-mix(in srgb, var(--color-brand) 35%, transparent)
+    );
   }
-
-
-.hero-eyebrow {
-  color: var(--color-muted);
-  /* Keep the other existing properties */
-}
-
-.hero-eyebrow span {
-  color: var(--color-cyan);
-  margin-inline: 0.6rem;
-}
-
-.title-line {
-  display: block;
-  color: var(--color-ink);
-}
-
-.title-glow {
-  margin-top: 0.18em;
-
-  background: linear-gradient(
-    105deg,
-    var(--color-brand) 5%,
-    var(--color-ink) 47%,
-    var(--color-cyan) 95%
-  );
-
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-
-  filter: drop-shadow(
-    0 0 24px color-mix(in srgb, var(--color-brand) 35%, transparent)
-  );
-}
 
 .hero-description {
   margin: 2.5rem 0 0;
