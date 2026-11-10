@@ -1,0 +1,156 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { ediciones } from "../data/campeones";
+---
+
+<BaseLayout
+    title="Campeones Nacionales"
+    description="Campeones Nacionales de la Olimpiada Ecuatoriana de Astronomía."
+>
+    <section class="champions-page container" aria-labelledby="champions-title">
+        <header class="page-header">
+            <h1 id="champions-title">
+                Campeones Nacionales de la Olimpiada Ecuatoriana de Astronomía
+            </h1>
+        </header>
+
+        <div class="editions-grid">
+            {
+                ediciones.map((edicion) => (
+                    <article class="edition-card">
+                        <h2>{edicion.titulo}</h2>
+
+                        {edicion.ganadores.length > 0 ? (
+                            <ol class="winners-list">
+                                {edicion.ganadores.map((nombre) => (
+                                    <li>{nombre}</li>
+                                ))}
+                            </ol>
+                        ) : (
+                            <p class="pending">{edicion.aviso}</p>
+                        )}
+                    </article>
+                ))
+            }
+        </div>
+    </section>
+</BaseLayout>
+
+<style>
+    .champions-page {
+        padding-block: clamp(2rem, 4vw, 4rem);
+    }
+
+    /* Main title */
+
+    .page-header {
+        max-width: 900px;
+        margin-bottom: clamp(2rem, 4vw, 3rem);
+    }
+
+    h1 {
+        margin: 0;
+
+        color: var(--color-ink);
+
+        font-family: var(--font-heading);
+        font-size: clamp(2rem, 4.5vw, 3.8rem);
+        font-weight: 700;
+        line-height: 1.12;
+        letter-spacing: -0.045em;
+
+        text-wrap: balance;
+    }
+
+    /* Edition cards */
+
+    .editions-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .edition-card {
+        min-width: 0;
+        padding: clamp(1.5rem, 3vw, 2.5rem);
+
+        background: var(--color-surface);
+        border: 1px solid var(--color-border);
+        border-radius: var(--radius-lg);
+
+        box-shadow: 0 8px 32px var(--color-shadow);
+    }
+
+    .edition-card h2 {
+        margin: 0;
+
+        color: var(--color-ink);
+
+        font-family: var(--font-heading);
+        font-size: clamp(1.25rem, 1.8vw, 1.65rem);
+        font-weight: 700;
+        line-height: 1.35;
+        letter-spacing: -0.025em;
+
+        text-wrap: balance;
+    }
+
+    /* Winners */
+
+    .winners-list {
+        display: grid;
+        gap: 0.85rem;
+
+        margin: 1.5rem 0 0;
+        padding: 1.5rem 0 0 1.5rem;
+
+        border-top: 1px solid var(--color-border);
+    }
+
+    .winners-list li {
+        padding-left: 0.3rem;
+
+        color: var(--color-ink);
+        font-size: 0.95rem;
+        line-height: 1.55;
+
+        overflow-wrap: break-word;
+    }
+
+    .winners-list li::marker {
+        color: var(--color-brand);
+        font-weight: 700;
+    }
+
+    /* Upcoming edition */
+
+    .pending {
+        margin: 1.5rem 0 0;
+        padding-top: 1.5rem;
+
+        border-top: 1px solid var(--color-border);
+
+        color: var(--color-muted);
+        font-size: 0.95rem;
+        font-style: italic;
+        line-height: 1.7;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 760px) {
+        .editions-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .champions-page {
+            padding-block: 2rem;
+        }
+
+        .edition-card {
+            padding: 1.5rem;
+        }
+    }
+</style>
